@@ -1,0 +1,75 @@
+body {
+  background: rgb(203, 175, 138);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(203, 175, 138, 1) 0%,
+    rgba(255, 234, 148, 1) 35%,
+    rgba(213, 185, 99, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(203, 175, 138, 1) 0%,
+    rgba(255, 234, 148, 1) 35%,
+    rgba(213, 185, 99, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(203, 175, 138, 1) 0%,
+    rgba(255, 234, 148, 1) 35%,
+    rgba(213, 185, 99, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cbaf8a",endColorstr="#d5b963",GradientType=1);
+}
+
+/* Preloader styles */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.loader {
+  text-align: center;
+}
+
+.progress {
+  width: 200px; /* Adjust the width as needed */
+  height: 20px; /* Adjust the height as needed */
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background-color: #ffe658; /* Change the color to your preference */
+}
+.loader-image {
+  height: auto; /* Maintain the aspect ratio */
+  margin-bottom: 20px; /* Add some spacing between the image and spinner */
+}
+@media (max-width: 768px) {
+  .loader-image {
+    width: 100%; /* Gambar akan memiliki lebar 100% di hp */
+  }
+}
+
+/* Untuk perangkat dengan lebar lebih dari 768px (misalnya, pc) */
+@media (min-width: 769px) {
+  .loader-image {
+    width: 50%; /* Gambar akan memiliki lebar 50% di pc */
+  }
+}
+.fade-out-modal {
+  transition: opacity 0.5s ease;
+}
+
+.fade-out-modal.fade-out {
+  opacity: 0;
+}
